@@ -225,7 +225,7 @@ if args.do_plot:
 
         print ("Composing figure for %s resolution" % res_name)
         plt.tight_layout()
-        plt.savefig('plot-%s %s.png' % (res_name, timeperiod_str), dpi=dpi, bbox_inches='tight')
+        plt.savefig('plot-%s.png' % (res_name), dpi=dpi, bbox_inches='tight')
         del fig
 
 else:
@@ -233,7 +233,7 @@ else:
 
 # Print stats to file
 for res_name in resolutions_conf.keys():
-    wr_stats = WriteStats('stats-%s %s.txt' % (res_name, timeperiod_str))
+    wr_stats = WriteStats('stats-%s.txt' % (res_name))
 
     for ma in ('simple', 'exp'):
         print("Writing stats for", res_name, ma)
